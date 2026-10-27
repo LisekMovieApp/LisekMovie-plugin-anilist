@@ -1,0 +1,19 @@
+[package]
+name = "lisek-plugin-anilist"
+description = "AniList (GraphQL) anime metadata provider extension for LisekMovie."
+version = "1.0.0-beta"
+edition = "2024"
+license = "PolyForm-Noncommercial-1.0.0"
+repository = "https://github.com/LisekMovieApp/LisekMovie-plugin-anilist"
+
+[dependencies]
+lisek-plugin-api = { path = "../LisekMovie-app/LisekMovie-Backend/lisek-plugin-api" }
+async-trait = "0.1.89"
+reqwest = { version = "0.13.4", features = ["json"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tracing = "0.1.44"
+
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["macros", "rt-multi-thread"] }
+wiremock = "0.6.5"
